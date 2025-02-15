@@ -33,8 +33,85 @@ namespace POS
         }
         static void MainMenu()
         {
-            Console.WriteLine("AXAD");
+            Console.WriteLine("[ A ]  Menu");
+            Console.WriteLine("[ B ]  Cart");
+            Console.WriteLine("[ C ]  History");
+            Console.WriteLine("[ D ]  Exit");
+
+            string choice = Console.ReadLine();
+            if (choice == "A" || choice == "a")
+            {
+                MenuOrder();
+            }
+            else if (choice == "B" || choice == "b")
+            {
+                Cart();
+            }
+            else if (choice == "C" || choice == "c")
+            {
+                History();
+            }
+            else if (choice == "D" || choice == "d")
+            {
+                Environment.Exit(0);
+            }
+            else
+            {
+                Console.WriteLine("Invalid Input");
+                MainMenu();
+            }
 
         }
+        static void MenuOrder()
+        {
+            Console.WriteLine("Menu");
+            Console.WriteLine("[ A ]  Chicken");
+            Console.WriteLine("[ B ]  Drinks");
+            Console.WriteLine("[ C ]  Side-Dish");
+            Console.WriteLine("[ D ]  Back");
+            string choice = Console.ReadLine();
+            if (choice == "A" || choice == "a")
+            {
+                Chicken();
+            }
+            else if (choice == "B" || choice == "b")
+            {
+                Drinks();
+            }
+            else if (choice == "C" || choice == "c")
+            {
+                SideDish();
+            }
+            else if (choice == "D" || choice == "d")
+            {
+                MainMenu();
+            }
+            else
+            {
+                Console.WriteLine("Invalid Input");
+                MenuOrder();
+            }
+        }
+        static void Chicken()
+        {
+            Console.WriteLine();
+                }
+        static void Drinks()
+        {
+            Console.WriteLine();
+        }
+        static void SideDish()
+        {
+            Console.WriteLine();
+        }
+        static void Cart()
+        {
+            Console.WriteLine();
+        }
+        static void History()
+        {
+            Console.WriteLine("nkiuu");
+        }
+
     }
 }
