@@ -24,8 +24,9 @@ namespace POS
 
             if (User == "admin" && Password == "admin")
             {
-                MainMenu();   
-            }else
+                MainMenu();
+            }
+            else
             {
                 Console.WriteLine("Please Try Again!");
                 login();
@@ -94,24 +95,244 @@ namespace POS
         }
         static void Chicken()
         {
-            Console.WriteLine();
+            Console.WriteLine("       Chicken                   Price\n");
+            Console.WriteLine("[ A ]  Fried Chicken              100");
+            Console.WriteLine("[ B ]  Inasal Chicken             120");
+            Console.WriteLine("[ C ]  Double Fried Chicken       180");
+            Console.WriteLine("[ D ]  Back");
+
+            Console.Write("Enter Choice: ");
+            string choice = Console.ReadLine();
+
+            if (choice == "A" || choice == "a")
+            {
+                Console.WriteLine("Fried Chicken");
+                Console.Write("Quantity  : ");
+                int qty = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Total: " + qty * 100);
+                Console.WriteLine("Add to Cart? [Y/N]");
+                string add = Console.ReadLine();
+                if (add == "Y" || add == "y")
+                {
+                    Console.WriteLine("Added to Cart");
+                    MainMenu();
                 }
+                else
+                {
+                    Console.WriteLine("Not Added to Cart");
+                    MainMenu();
+                }
+            }
+            else if (choice == "B" || choice == "b")
+            {
+                Console.WriteLine("Inasal Chicken");
+                Console.Write("Quantity  : ");
+                int qty = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Total: " + qty * 120);
+                Console.WriteLine("Add to Cart? [Y/N]");
+                string add = Console.ReadLine();
+                if (add == "Y" || add == "y")
+                {
+                    Console.WriteLine("Added to Cart");
+                    MainMenu();
+                }
+                else
+                {
+                    Console.WriteLine("Not Added to Cart");
+                    MainMenu();
+                }
+            }
+            else if (choice == "C" || choice == "c")
+            {
+                Console.WriteLine("Double Fried Chicken");
+                Console.Write("Quantity  : ");
+                int qty = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Total: " + qty * 180);
+                Console.WriteLine("Add to Cart? [Y/N]");
+                string add = Console.ReadLine();
+                if (add == "Y" || add == "y")
+                {
+                    Console.WriteLine("Added to Cart");
+                    MainMenu();
+                }
+                else
+                {
+                    Console.WriteLine("Not Added to Cart");
+                    MainMenu();
+                }
+            }
+            else if (choice == "D" || choice == "d")
+            {
+                MenuOrder();
+            }
+            else
+            {
+                Console.WriteLine("Invalid Input");
+                Chicken();
+            }
+        }
         static void Drinks()
         {
-            Console.WriteLine();
-        }
-        static void SideDish()
-        {
-            Console.WriteLine();
-        }
-        static void Cart()
-        {
-            Console.WriteLine();
-        }
-        static void History()
-        {
-            Console.WriteLine("nkiuu");
-        }
+            Console.WriteLine("       Drinks            Price\n");
+            Console.WriteLine("[ A ]  Coke              49");
+            Console.WriteLine("[ B ]  Royal             49");
+            Console.WriteLine("[ C ]  Sprite            49");
+            Console.WriteLine("[ D ]  Water             20");
+            Console.WriteLine("[ E ]  Back");
 
+            Console.Write("Enter Choice: ");
+            string choice = Console.ReadLine();
+            Console.WriteLine("");
+
+            if (choice == "A" || choice == "a")
+            {
+                Console.WriteLine("Coke");
+                Console.Write("Quantity  : ");
+                int qty = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Total: " + qty * 49);
+                Console.WriteLine("Add to Cart? [Y/N]");
+                string add = Console.ReadLine();
+                if (add == "Y" || add == "y")
+                {
+                    Console.WriteLine("Added to Cart");
+                    MainMenu();
+                }
+                else
+                {
+                    Console.WriteLine("Not Added to Cart");
+                    MainMenu();
+                }
+            }
+            else if (choice == "B" || choice == "b")
+            {
+                Console.WriteLine("Royal");
+                Console.Write("Quantity  : ");
+                int qty = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Total: " + qty * 49);
+                Console.WriteLine("Add to Cart? [Y/N]");
+                string add = Console.ReadLine();
+                if (add == "Y" || add == "y")
+                {
+                    Console.WriteLine("Added to Cart");
+                    MainMenu();
+                }
+                else
+                {
+                    Console.WriteLine("Not Added to Cart");
+                    MainMenu();
+                }
+
+            }
+            else if (choice == "C" || choice == "c")
+            {
+                Console.WriteLine("Sprite");
+                Console.Write("Quantity  : ");
+                int qty = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Total: " + qty * 49);
+                Console.WriteLine("Add to Cart? [Y/N]");
+                string add = Console.ReadLine();
+                if (add == "Y" || add == "y")
+                {
+                    Console.WriteLine("Added to Cart");
+                    MainMenu();
+                }
+                else
+                {
+                    Console.WriteLine("Not Added to Cart");
+                    MainMenu();
+                }
+            }
+            else if (choice == "D" || choice == "d")
+            {
+                Console.WriteLine("Water");
+                Console.Write("Quantity  : ");
+                int qty = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Total: " + qty * 20);
+                Console.WriteLine("Add to Cart? [Y/N]");
+                string add = Console.ReadLine();
+                if (add == "Y" || add == "y")
+                {
+                    Console.WriteLine("Added to Cart");
+                    MainMenu();
+                }
+                else
+                {
+                    Console.WriteLine("Not Added to Cart");
+                    MainMenu();
+                }
+            }
+            else if (choice == "E" || choice == "e")
+            {
+                MenuOrder();
+            }
+            else
+            {
+                Console.WriteLine("Invalid Input");
+                Drinks();
+            }
+        }        
+            static void SideDish()
+            {
+                Console.WriteLine("       Side-Dish            Price\n");
+                Console.WriteLine("[ A ]   Coleslaw              59");
+                Console.WriteLine("[ B ]   Fries                 59");
+
+            Console.Write("Enter Choice: ");
+            string choice = Console.ReadLine();
+            Console.WriteLine("");
+
+            if (choice == "A" || choice == "a")
+            {
+                Console.WriteLine("Coleslaw");
+                Console.Write("Quantity  : ");
+                int qty = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Total: " + qty * 59);
+                Console.WriteLine("Add to Cart? [Y/N]");
+                string add = Console.ReadLine();
+                if (add == "Y" || add == "y")
+                {
+                    Console.WriteLine("Added to Cart");
+                    MainMenu();
+                }
+                else
+                {
+                    Console.WriteLine("Not Added to Cart");
+                    MainMenu();
+                }
+            }
+            else if (choice == "B" || choice == "b")
+            {
+                Console.WriteLine("Fries");
+                Console.Write("Quantity  : ");
+                int qty = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Total: " + qty * 59);
+                Console.WriteLine("Add to Cart? [Y/N]");
+                string add = Console.ReadLine();
+                if (add == "Y" || add == "y")
+                {
+                    Console.WriteLine("Added to Cart");
+                    MainMenu();
+                }
+                else
+                {
+                    Console.WriteLine("Not Added to Cart");
+                    MainMenu();
+                }
+            }
+            else
+            {
+                Console.WriteLine("Invalid Input");
+                SideDish();
+            }
+        }
+            static void Cart()
+            {
+                
+            }
+            static void History()
+            {
+                Console.WriteLine("nkiuu");
+            }
+
+        }
     }
-}
